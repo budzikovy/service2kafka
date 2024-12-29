@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: mpie
+      changes:
+        - createTable:
+            tableName: BOOK
+            columns:
+              - column:
+                  name: isbn
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: author
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: category
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: borrower
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
